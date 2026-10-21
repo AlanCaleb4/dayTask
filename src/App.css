@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.task_card {
+  display: flex;
+  align-items: unset;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+  text-align: start;
+}
+
+.task_card ul {
+  width: 23.8%;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 20px 15px;
+  background-color: #8b6b42;
+  color: #fff;
+
+}
+
+.fltrs {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fltrs button,
+.task_card ul button {
+  border: unset;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+  font: 15px/20px Sans-serif;
+  cursor: pointer;
+  transition: 0.3s linear;
+  text-transform: capitalize;
+}
+
+.fltrs button:hover,.fltrs button.active {
+  background-color: #d8b51b;
+  color: #000;
+}
+
+.task_card ul li:has(button) {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_card ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+strong {
+  font: 20px/25px sans-serif;
+  margin-bottom: 20px;
+  color: rgb(56, 41, 2);
+}
+
+.form {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form .fld {
+  width: 23.8%;
+}
+
+.form label span {
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.form label input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(216, 90, 90);
+  color: #fff;
+}
+
+.form label input,
+.form label input::placeholder {
+  color: #fff;
+  font: 16px/22px sans-serif;
+}
+
+.form label input:focus-visible {
+  border: unset;
+  outline: unset;
+}
+
+.form button {
+  font: 15px/20px sans-serif;
+  padding: 10px 12px;
+  border: unset;
+  border-radius: 30px;
+  width: 100%;
+  background-color: green;
+  color: #fff;
+  flex: 1;
+  transition: 0.3s linear;
+}
+
+.form .fld span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form button:hover {
+  background-color: #000;
+}
+
+.task_card ul button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-sec{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* responsive */
+
+@media screen and (max-width:1000px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width:991px) {
+
+  .form label input,
+  .form label input::placeholder {
+    font: 15px/20px;
+  }
+
+  .form label input,
+  .form label input::placeholder {
+    color: #fff;
+    font: 15px/20px sans-serif;
+  }
+
+  .task_card {
+    gap: 13.7px;
+  }
+}
+
+@media screen and (max-width:880px) {
+  .form {
+    gap: 10px;
+  }
+
+  .form .fld {
+    width: 23.9%;
+  }
+
+  .task_card {
+    gap: 10px;
+  }
+
+  .task_card ul li {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .task_card ul {
+    width: 32.2%;
+  }
+
+  .form .fld {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .task_card ul {
+    width: 32%;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .form .fld {
+    width: 100%;
+  }
+
+  .task_card ul {
+    width: 48.8%;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .task_card ul {
+    width: 100%;
+  }
+
+  .fltrs{
+    flex-direction: column;
+  }
+}
